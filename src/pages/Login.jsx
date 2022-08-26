@@ -1,6 +1,6 @@
 import { Formik, Form, } from 'formik';
 import { useContext, useEffect } from 'react';
-import { Redirect, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import * as Yup from 'yup';
 import { AppInput } from '../components';
 import AuthContext from '../contexts/AuthContext';
@@ -87,7 +87,7 @@ function Login() {
                                 placeholder="Password"
                             />
 
-                            <button type="submit" className="bg-sky-400 w-full mt-5 py-4 rounded-full font-bold text-lg" >Login</button>
+                            <button type="submit" className="bg-sky-400 hover:bg-sky-500 w-full mt-5 py-4 rounded-full font-bold text-lg" >Login</button>
                         </Form>
                     )}
                 </Formik>

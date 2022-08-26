@@ -1,10 +1,15 @@
-import { useContext, useEffect } from "react";
+import axios from "axios";
+import { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import { Container, Post } from "../components";
 import AuthContext from "../contexts/AuthContext";
 
 function Posts() {
     const { user } = useContext(AuthContext);
     const history = useHistory();
+    const [isLoading, setIsLoading] = useState(true)
+    const [posts, setPosts] = useState([]);
+
 
     // this page only exposed for authenticated users 
     useEffect(() => {
@@ -13,9 +18,33 @@ function Posts() {
         }
     }, [user])
 
+
+    useEffect(() => {
+        const loadPosts = async () => {
+            const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
+            setPosts(response.data);
+            setIsLoading(false)
+
+        }
+        loadPosts()
+    }, []);
+
     return (
         <div>
-            <h2>Posts</h2>
+            <Container>
+                <div className="mt-5">
+                    <h2 className="text-center font-bold text-3xl" >Posts {!isLoading && `(${posts.length})`}</h2>
+                    <div className="flex flex-wrap mt-6 justify-center ">
+
+                        {
+                            isLoading
+                                ? <p className="font-bold text-2xl text-sky-400" >Loading...</p>
+                                : posts.map((post, index) => <Post key={post.id} post={post} />)
+                        }
+                    </div>
+                </div>
+
+            </Container>
         </div>
     );
 }

@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
 } from "react-router-dom";
 import { Navbar } from "./components";
 import AuthContext from "./contexts/AuthContext";
@@ -16,14 +17,13 @@ export default function App() {
   const [user, setUser] = useState()
   useEffect(() => {
     const user = localStorage.getItem("user")
-    console.log("App")
     setUser(JSON.parse(user))
   }, [])
 
   return (
     <AuthContext.Provider value={{ user, setUser }}>
       <Router>
-        <div className="bg-gray-100">
+        <div className="">
           <Navbar />
           <hr />
           <Switch>
@@ -36,6 +36,7 @@ export default function App() {
             <Route path="/posts">
               <Posts />
             </Route>
+            <Redirect to="/" />
           </Switch>
         </div>
       </Router>

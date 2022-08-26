@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import AuthContext from "../contexts/AuthContext";
 import Container from "./Container";
@@ -23,11 +23,6 @@ const Navbar = () => {
 
     }
 
-    useEffect(() => {
-        console.log("nav: ", user)
-
-        // console.log(user?.email)
-    }, [user])
 
     return <nav className="py-4" >
         <Container>

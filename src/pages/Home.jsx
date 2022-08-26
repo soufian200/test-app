@@ -5,7 +5,7 @@ function Home() {
         <div>
             <Container>
                 <div className="flex justify-center items-center mt-10">
-                    <h1 className="font-bold text-xl">Home</h1>
+                    <h1 className="font-bold text-3xl">Home</h1>
                 </div>
             </Container>
         </div>
