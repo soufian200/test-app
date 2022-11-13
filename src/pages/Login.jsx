@@ -60,9 +60,9 @@ function Login() {
     }, [user])
 
     return (
-        <div className="flex justify-center items-center">
-            <div className="bg-white my-10 p-5 rounded-2xl shadow-md">
-                <h2 className="font-bold text-2xl " >Login</h2>
+        <div className="login-container">
+            <div className="login-card">
+                <h2 className="head" >Login</h2>
                 <Formik
                     initialValues={initialValues}
                     validationSchema={LoginSchema}
@@ -76,7 +76,7 @@ function Login() {
                                 type="email"
                                 errorField={errors.email}
                                 touchedFiled={touched.email}
-                                placeholder="Email"
+                                placeholder="email@exemple.com"
                             />
 
                             <AppInput
@@ -87,7 +87,7 @@ function Login() {
                                 placeholder="Password"
                             />
 
-                            <button type="submit" className="bg-sky-400 hover:bg-sky-500 w-full mt-5 py-4 rounded-full font-bold text-lg" >Login</button>
+                            <button type="submit" className="form-submit-btn" >Login</button>
                         </Form>
                     )}
                 </Formik>

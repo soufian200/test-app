@@ -107,3 +107,73 @@ nav div.nav-wrapper .list li .link.btn-login:hover {
   font-size: 30px;
 
 }
+
+/* Login Styles */
+
+div.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.login-container .login-card {
+  width: 410px;
+  background-color: white;
+  margin-top: 50px;
+  padding: 40px;
+  box-shadow: 1px 1px 5px rgb(211, 211, 211);
+  border-radius: 10px;
+}
+
+div.login-container .login-card h2.head {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+div.login-container div.login-card div.input-container {
+  margin-top: 30px;
+}
+
+div.login-container div.login-card div.input-container div.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+div.login-container div.login-card div.input-container div.input-wrapper label.label {
+  color: rgb(65, 65, 65);
+  margin-bottom: 6px;
+  text-transform: capitalize;
+}
+
+div.login-container div.login-card div.input-container div.input-wrapper input.input {
+  border: solid 1px rgb(226, 226, 226);
+  background-color: rgb(245, 245, 245);
+  padding: 20px 15px;
+  border-radius: 12px;
+  font-size: 17px;
+}
+
+div.login-container div.login-card div.input-container div.input-wrapper div.input-feedback {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px
+}
+
+div.login-container div.login-card form button.form-submit-btn {
+  /* bg-sky-400 hover:bg-sky-500 w-full mt-5 py-4 rounded-full font-bold text-lg */
+  background-color: rgb(255, 60, 60);
+  width: 100%;
+  color: white;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 20px;
+  margin-top: 10px;
+
+
+}
+
+div.login-container div.login-card form button.form-submit-btn:hover {
+  background-color: rgb(228, 35, 35);
+}
