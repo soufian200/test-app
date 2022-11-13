@@ -32,13 +32,13 @@ function Posts() {
     return (
         <div>
             <Container>
-                <div className="mt-5">
-                    <h2 className="text-center font-bold text-3xl" >Posts {!isLoading && `(${posts.length})`}</h2>
-                    <div className="flex flex-wrap mt-6 justify-center ">
+                <div className="post-container">
+                    <h2 className="head" >Posts {!isLoading && `(${posts.length})`}</h2>
+                    <div className="posts-list">
 
                         {
                             isLoading
-                                ? <p className="font-bold text-2xl text-sky-400" >Loading...</p>
+                                ? <p className="loading" >Loading...</p>
                                 : posts.map((post, index) => <Post key={post.id} post={post} />)
                         }
                     </div>

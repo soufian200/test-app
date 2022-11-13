@@ -42,6 +42,12 @@ hr.divider {
   margin: 6px 0;
 }
 
+.loading {
+  font-weight: bold;
+  font-size: 20px;
+  color: #222;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
@@ -161,7 +167,6 @@ div.login-container div.login-card div.input-container div.input-wrapper div.inp
 }
 
 div.login-container div.login-card form button.form-submit-btn {
-  /* bg-sky-400 hover:bg-sky-500 w-full mt-5 py-4 rounded-full font-bold text-lg */
   background-color: rgb(255, 60, 60);
   width: 100%;
   color: white;
@@ -170,10 +175,49 @@ div.login-container div.login-card form button.form-submit-btn {
   font-size: 20px;
   border-radius: 20px;
   margin-top: 10px;
-
-
 }
 
 div.login-container div.login-card form button.form-submit-btn:hover {
   background-color: rgb(228, 35, 35);
+}
+
+/* Posts Styles */
+.post-container {
+  margin-top: 20px;
+}
+
+.post-container .head {
+  font-weight: bold;
+  font-size: 30px;
+  /* text-align: center; */
+  margin: 25px 0;
+
+}
+
+.post-container .posts-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.post-card {
+  background-color: white;
+  margin-left: 35px;
+  margin-bottom: 35px;
+  padding: 20px;
+  box-shadow: 1px 1px 5px rgb(235, 235, 235);
+  border-radius: 10px;
+  width: 30%;
+}
+
+.post-card .post-title {
+  color: rgb(48, 48, 48);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.post-card .post-body {
+  margin-top: 20px;
+  color: rgb(107, 107, 107);
 }
