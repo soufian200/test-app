@@ -13,6 +13,97 @@ code {
     monospace;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Global Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+hr.divider {
+  border: 0;
+  height: 1px;
+  background-color: black;
+  opacity: .1;
+  margin: 6px 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+/* Navbar Styles */
+
+nav {
+  padding: 16px 0;
+}
+
+nav div.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav div.nav-wrapper .logo {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+nav div.nav-wrapper .list {
+  display: flex;
+  align-items: center;
+}
+
+nav div.nav-wrapper .list li .link {
+  /* font-weight: bold; */
+  margin: 0 20px;
+  font-size: 20px;
+
+}
+
+nav div.nav-wrapper .list li .link:hover {
+  color: rgb(255, 60, 60);
+  transition: all .2s;
+}
+
+nav div.nav-wrapper .list li .link.btn-login {
+  background-color: rgb(255, 60, 60);
+  padding: 10px 30px;
+  border-radius: 20px;
+  color: white
+}
+
+nav div.nav-wrapper .list li .link.btn-login:hover {
+  background-color: rgb(216, 29, 29);
+  color: white !important;
+}
+
+/* Home Styles */
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.home h1.label {
+  font-weight: bold;
+  font-size: 30px;
+
+}

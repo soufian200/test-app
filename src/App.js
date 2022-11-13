@@ -25,7 +25,7 @@ export default function App() {
       <Router>
         <div className="">
           <Navbar />
-          <hr />
+          <hr className="divider" />
           <Switch>
             <Route exact path="/">
               <Home />
